@@ -1,1 +1,1 @@
-### Kinetics of iodide-hydrogen peroxide clock reaction
+## Kinetics of iodide-hydrogen peroxide clock reaction
