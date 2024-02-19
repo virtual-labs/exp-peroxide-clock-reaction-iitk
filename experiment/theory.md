@@ -1,5 +1,3 @@
-<b>Theory of experiment</b><br>
-
 When hydrogen peroxide is added to a solution of potassium iodide, the iodide ions are oxidized to form iodine. <br>
 
 2I– (aq) + 2H+ (aq) + H2O2 (aq)  I2 (s) + 2H2O (l) <br>
