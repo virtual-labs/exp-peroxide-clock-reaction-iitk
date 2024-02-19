@@ -1,0 +1,87 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1.In which medium does the reaction between iodide ions and hydrogen peroxide takes place??",
+      "answers": {
+        "a": "Neutral",
+        "b": "Slightly alkaline",
+        "c": "Acidic",
+        "d": "Highly Acidic"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. Which ion is formed when potassium iodide reacts with sodium thiosulphate, in an acidic medium, in the presence of hydrogen peroxide?",
+      "answers": {
+        "a": "SO₃⁻",
+        "b": "I⁻",
+        "c": "S₂O₃²⁻",
+        "d": "H⁺"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },{
+      "question": "3. Which one of the following solutions is used as an indicator in the reaction between potassium iodide and sodium thiosulphate, in the presence of hydrogen peroxide?",
+      "answers": {
+        "a": " Starch solution",
+        "b": "Methyl orange",
+        "c": "Phenolphthalein",
+        "d": "Sulphuric acid"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },{
+      "question": "4. What is observed when potassium iodide reacts with sodium thiosulphate, in an acidic medium, in the presence of hydrogen peroxide, using a starch indicator?",
+      "answers": {
+      "a": "Appearance of turbidity",
+      "b": "No characteristic change",
+      "c": "Appearance of blue colour",
+      "d": "Appearance of yellow oily layer"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },{
+      "question": "5. Which one of the following complexes is responsible for the blue colour obtained in the reaction between potassium iodide and sodium thiosulphate, in the presence of hydrogen peroxide, using a starch indicator?",
+      "answers": {
+        "a": "Starch – Iodine complex",
+        "b": "Starch – Sulphate complex",
+        "c": "Iodide – Thiosulphate complex",
+        "d": "Starch – Thiosulphate complex"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }
+  ]
+}

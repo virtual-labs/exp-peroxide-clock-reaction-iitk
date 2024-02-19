@@ -1,0 +1,14 @@
+
+/home/runner/work/exp-peroxide-clock-reaction-iitk/exp-peroxide-clock-reaction-iitk/experiment/simulation/script.js
+  103:31  warning  'ML' is assigned a value but never used     no-unused-vars
+  295:17  warning  'cthis' is not defined                      no-undef
+  351:77  warning  'e' is defined but never used               no-unused-vars
+  356:60  warning  'e' is defined but never used               no-unused-vars
+  361:10  warning  'openPopup' is defined but never used       no-unused-vars
+  367:10  warning  'closePopup' is defined but never used      no-unused-vars
+  385:10  warning  'startStopwatch' is defined but never used  no-unused-vars
+  444:10  warning  'resetStopwatch' is defined but never used  no-unused-vars
+  453:78  warning  'e' is defined but never used               no-unused-vars
+
+✖ 9 problems (0 errors, 9 warnings)
+

@@ -1,0 +1,90 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. How can we estimate the rate of the reaction between potassium iodide and sodium thiosulphate, in the presence of hydrogen peroxide, using a starch solution as indicator?",
+      "answers": {
+        "a": "From the volume of distilled water.",
+        "b": "From the volume of starch solution",
+        "c": "By measuring the time taken for the formation of iodide ions.",
+        "d": "By measuring the time taken for the appearance of blue colour."
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2.In which reaction does the following composition give a blue coloration? ?",
+      "answers": {
+        "a": "KI, H₂SO₄, Na₂S₂O₃, Starch solution, Hydrogen peroxide, Distilled water",
+        "b": "KI, Starch solution, Na₂S₂O₃, Hydrogen peroxide, Distilled water",
+        "c": "KI, H₂SO₄, Na₂S₂O₃, Starch solution.",
+        "d": "KI, Starch solution, Na₂S₂O₃, Hydrogen peroxide."
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Which one of the following acids is used to make the medium acidic in the reaction between potassium iodide and sodium thiosulphate, in the presence of hydrogen peroxide?",
+      "answers": {
+        "a": "Lactic acid",
+        "b": "Sulphuric acid",
+        "c": "Oxalic acid",
+        "d": "Acetic acid"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. What is the nature of the graph obtained by plotting Time for the appearance of blue colour Vs 1/volume of KI?",
+      "answers": {
+        "a": "Straight line with zero slope.",
+        "b": "Straight sloping line.",
+        "c": "Hyperbola ",
+        "d": "Parabola."
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5.Consider the reaction R→P. Which of the following expresses the rate of the reaction?",
+      "answers": {
+        "a": "Rate = d[P]/dt",
+        "b": "Rate = d[R]/dt",
+        "c": "–d[P]/dt",
+        "d": "d[P]/d[R]"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }
+  ]
+}
