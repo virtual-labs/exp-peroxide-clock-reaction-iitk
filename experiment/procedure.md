@@ -1,4 +1,4 @@
-<b>Procedure in laboratory (diagram)</b><br>
+<b>Materials & Reagents Required:</b><br>
 
 1)	Conical Fluxes (250 mL)
 2)	Measuring Cylinder (25 mL)
@@ -8,24 +8,24 @@
 
 <b>Procedure in laboratory (diagram)</b><br>
 <br>
-<img src="images/fig3.png" width="300" height="400">
-<img src="images/fig44.png"><br>
+<center><img src="images/fig3.png" width="300" height="400"></center><br>
+<left><img src="images/fig44.png"></left><br>
 <br>
 <br>
-<img src="images/fig5.png" width="400" height="500">
-<img src="images/fig44.png" width="80" height="120"><br>
+<center><img src="images/fig5.png" width="400" height="500"></center>
+<left><img src="images/fig44.png" width="80" height="120"></left><br>
 <br>
 <br>
-<img src="images/fig6.jpg" width="500" height="400"><br>
+<center><img src="images/fig6.jpg" width="500" height="400"></center><br>
 <br>
-<img src="images/fig7.jpg" width="600" height="400"><br>
+<center><img src="images/fig7.jpg" width="600" height="400"></center><br>
 <br>
-<img src="images/fig678.png"><br>
+<center><img src="images/fig678.png"></center><br>
 <br>
-<img src="images/fig8.png" width="300" height="100"><br>
-<img src="images/fig9.png"><br>
+<center><img src="images/fig8.png" width="300" height="100"></center><br>
+<center><img src="images/fig9.png"></center><br>
 
-<img src="images/fig10.png"><br>
+<center><img src="images/fig10.png"></center><br>
 <img src="images/fig11.png"><br>
 <br>
 <img src="images/fig12.png" width="300" height="100"><br>
@@ -48,14 +48,6 @@
 <b>Table – 3</b><br>
 <br>
 <img src="images/fig16.png"><br>
-<br>
-<b>Procedure in simulator of the experiment</b><br>
-<br>
-To be added based on the simulation<br>
-<br>
-<b>Simulator</b><br>
-<br>
-To be created<br>
 <br>
 <b>Analysis</b><br>
 <br>
