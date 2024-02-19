@@ -1,1 +1,1 @@
-## Experiment name
+### Kinetics of iodide-hydrogen peroxide clock reaction
