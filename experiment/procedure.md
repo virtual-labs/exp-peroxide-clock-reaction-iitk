@@ -16,7 +16,8 @@
 <left><img src="images/fig44.png" width="80" height="120"></left><br>
 <br>
 <br>
-<center><img src="images/fig6.jpg" width="500" height="400"></center><br>
+<center><img src="images/fig6.jpg" width=
+"500" height="400"></center><br>
 <br>
 <center><img src="images/fig7.jpg" width="600" height="400"></center><br>
 <br>
@@ -33,9 +34,9 @@
 <b>Procedure in laboratory</b><br>
 <br>
 <img src="images/fig89.jpg" width="600" height="300"><br>
-<b>See video!</b><br>
+<!-- <b>See video!</b><br> -->
 <br>
-<b>Data and the analysis</b><br>
+<b>Sample Data and Analysis</b><br>
 <br>
 <b>Table – 1</b><br>
 <br>
