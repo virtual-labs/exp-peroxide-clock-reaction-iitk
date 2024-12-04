@@ -7,7 +7,7 @@
         "a": "Neutral",
         "b": "Slightly alkaline",
         "c": "Acidic",
-        "d": "Highly Acidic"
+        "d": "The reaction is independent of pH"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
