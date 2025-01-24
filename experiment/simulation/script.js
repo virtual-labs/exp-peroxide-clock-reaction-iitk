@@ -161,7 +161,7 @@ class chemical {
             return [`Measure ${this.FlaskMl = 5}ml of sodium thiosulphate to add in the solution`, `घोल में मिलाने के लिए ${this.FlaskMl = 5} मिलीलीटर सोडियम थायोसल्फेट मापें`]
         }
         else if (instructionId == 5) {
-            return [`Now measure ${this.FlaskMl = 10}ml of start h solution and add it in solution`, `अब स्टार्ट एच सॉल्यूशन का ${this.FlaskMl = 10}ml मापें और इसे सॉल्यूशन में जोड़ें`]
+            return [`Now measure ${this.FlaskMl = 10}ml of “starch” h solution and add it in solution`, `अब स्टार्ट एच सॉल्यूशन का ${this.FlaskMl = 10}ml मापें और इसे सॉल्यूशन में जोड़ें`]
         }
         else if (instructionId == 6) {
             return [`Now measure ${this.FlaskMl = 5}ml of hydrogen peroxide to add into the mixture `, `अब मिश्रण में मिलाने के लिए ${this.FlaskMl = 5}ml हाइड्रोजन पेरोक्साइड मापें`]
