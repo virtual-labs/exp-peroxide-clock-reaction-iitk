@@ -1,4 +1,4 @@
-// ✅ VOICEOVER SETUP
+
 var voiceLang = localStorage.getItem("lang") || "eng"; // This will set voiceLang to the stored value, or "eng" if null/undefined
 if (voiceLang === "hi") {
     voiceLang = "hindi";
@@ -14,11 +14,12 @@ function speakStep(text) {
         const utterance = new SpeechSynthesisUtterance(text);
 
         const voices = speechSynthesis.getVoices();
+        // Prioritize specific voices if available, otherwise fall back to language code
         const hindiVoice = voices.find(v => v.name.includes("Kalpana") || v.lang === "hi-IN");
-        const engVoice = voices.find(v => v.name.includes("Zira") || v.lang === "en-US" || v.lang === "en-IN");
+        const engVoice = voices.find(v => v.name.includes("Zira") || v.lang === "en-US" || v.lang === "en-IN" || v.name.includes("Google US English"));
 
         utterance.voice = voiceLang === "hindi" ? hindiVoice : engVoice;
-        utterance.lang = voiceLang === "hindi" ? "hi-IN" : "en-IN";
+        utterance.lang = voiceLang === "hindi" ? "hi-IN" : "en-US"; // Changed to en-US for broader compatibility
         utterance.rate = 1;
         utterance.pitch = 1;
         utterance.volume = 1;
@@ -26,6 +27,7 @@ function speakStep(text) {
         speechSynthesis.speak(utterance);
     };
 
+    // Ensure voices are loaded before attempting to speak
     if (speechSynthesis.getVoices().length === 0) {
         speechSynthesis.onvoiceschanged = speak;
     } else {
@@ -34,7 +36,8 @@ function speakStep(text) {
 }
 
 function playVoiceForCurrentStep() {
-    const step = chemicals.step;
+    const step = chemicals.step; // Access the current step from the chemicals object
+    console.log("Playing voice for step:", step); // Debugging: log the step for voiceover
 
     const voiceInstructions = {
         eng: {
@@ -55,7 +58,7 @@ function playVoiceForCurrentStep() {
         }
     };
 
-   const text = voiceInstructions[voiceLang][step];
+    const text = voiceInstructions[voiceLang][step];
     if (text) speakStep(text);
 }
 
@@ -67,26 +70,30 @@ class Chemical {
     FlaskMl = "";
     lang = localStorage.getItem("lang");
     instruct = document.getElementById("instruction");
-    step = 3;
+    step = 1; // Start at step 1 (initial state, before popup closes)
 
     constructor() {
         this.OtherInfoInBasedOnSelectedLanguage();
-        this.UpdateInstruction(2);
         this.FlaskOfMl();
+        // Initial instruction and validation are now handled by closePopup()
     }
-   UpdateInstruction(id) {
-    const [en, hi] = this.Instructions(id);
-    this.instruct.innerText = (this.lang === "hi") ? hi : en;
 
-    voiceLang = this.lang === "hi" ? "hindi" : "eng";
-    playVoiceForCurrentStep(id);
-}
+    UpdateInstruction(id) {
+        const [en, hi] = this.Instructions(id);
+        this.instruct.innerText = (this.lang === "hi") ? hi : en;
 
-
+        // Update the global voiceLang variable before playing the voice
+        voiceLang = this.lang === "hi" ? "hindi" : "eng";
+        // Call the global playVoiceForCurrentStep function without an ID,
+        // as it now relies on chemicals.step for the current step.
+        playVoiceForCurrentStep();
+    }
 
     intial_to_middle(elementId, translateX, translateTop = -150, rotateAngle = -20, comebackToIntialPosition) {
-        this.Validate(this.step);
-        ++this.step;
+        // Validation is now done *before* calling this function based on `chemicals.step`
+        // Increment step *after* the current action starts
+        // We increment here to set up for the *next* instruction
+        // The instruction for the current step was played when the element became clickable.
 
         let element = document.getElementById(elementId);
         element.style.transition = 'transform 0.5s ease';
@@ -113,6 +120,12 @@ class Chemical {
         setTimeout(() => {
             this.final_Beaker_Chemical_Ammount(this.changeImageAsPerSelectedBeaker(elementID)[2])
         }, 1500);
+
+        // After chemical added and animation, advance step and update instruction for the *next* chemical
+        // Ensure this happens after the current chemical is fully added visually.
+        this.step++; // Advance to the next step
+        this.UpdateInstruction(this.step); // Play instruction for the new step
+        this.Validate(this.step); // Make the next element clickable
     }
 
     final_Beaker_Chemical_Ammount(step = 1) {
@@ -138,8 +151,6 @@ class Chemical {
             this.emptybeaker.style.transform = `translateX(${comabackPosition}px)`;
             this.changeBeakerImage("empty");
         }, 1500);
-
-        // Removed stopwatch trigger from here
     }
 
     changeBeakerImage(status, ML = 5, elementId) {
@@ -178,14 +189,9 @@ class Chemical {
             4: [`Measure ${flaskMl}ml of sodium thiosulphate to add in the solution`, `घोल में मिलाने के लिए ${flaskMl} मिलीलीटर सोडियम थायोसल्फेट मापें`],
             5: [`Now measure ${flaskMl}ml of starch solution and add it`, `अब स्टार्च सॉल्यूशन का ${flaskMl}ml मापें और मिलाएं`],
             6: [`Now measure ${flaskMl}ml of hydrogen peroxide to add`, `अब ${flaskMl}ml हाइड्रोजन पेरोक्साइड मापें और मिलाएं`],
-            7: ["Now stir the mixture and immediately start the stop watch", "अब मिश्रण को हिलाएं और तुरंत स्टॉप वॉच चालू करें"]
+            7: ["Now stir the mixture and immediately start the stop watch Please wait for completion of reaction" , "अब मिश्रण को हिलाएं और तुरंत स्टॉप वॉच चालू करें "]
         };
         return instructions[instructionId];
-    }
-
-    UpdateInstruction(id) {
-        const [en, hi] = this.Instructions(id);
-        this.instruct.innerText = (this.lang === "hi") ? hi : en;
     }
 
     OtherInfoInBasedOnSelectedLanguage() {
@@ -206,20 +212,23 @@ class Chemical {
 
     movementOfSelectedBeaker(elementId) {
         const mapping = {
-            "Sulphuricacid1": [-160, 4],
+            "Sulphuricacid1": [-160, 4], // This implies after sulphuric acid, step 4 is next.
             "SodiumThiosulphate1": [-331, 5],
             "starchsolution1": [-482, 6],
             "Hydrogenperoxide1": [-640, 7]
         };
-        const [x, instructionId] = mapping[elementId];
+        const [x, nextInstructionId] = mapping[elementId];
+        // Don't update instruction or validate here directly.
+        // `middle_to_final` will handle advancing the step and updating instruction/validation.
         chemicals.intial_to_middle(elementId, x, -150, -50, 20);
-        this.UpdateInstruction(instructionId);
     }
 
     DirectAnimationForDistillerWater() {
-        this.Validate(2);
-        this.UpdateInstruction(3);
         this.DistillerWaterAnimataion(-110, -80, -40, 10);
+        // After this animation, advance the step and update instruction
+        this.step = 3; // After water, the next step is Sulphuric Acid
+        this.UpdateInstruction(this.step); // Play instruction for step 3
+        this.Validate(this.step); // Make Sulphuric Acid clickable
     }
 
     DistillerWaterAnimataion(translateX, translateY, rotateAngle, comebackPosition) {
@@ -232,7 +241,7 @@ class Chemical {
 
         setTimeout(() => {
             this.water.style.transform = `translateX(${comebackPosition}px)`;
-            this.final_Beaker_Chemical_Ammount(1);
+            this.final_Beaker_Chemical_Ammount(1); // Assuming 1 means after distilled water
             this.water.setAttribute("src", "./DISTILLED_-WATER2.png");
         }, 1500);
     }
@@ -247,10 +256,7 @@ class Chemical {
 
         setTimeout(() => {
             stir.classList.remove("transform-stir");
-
-            // ✅ Moved stopwatch trigger here
             this.DoFianlThingsAfterAllChemicalAdded();
-
         }, 3000);
     }
 
@@ -258,33 +264,81 @@ class Chemical {
         startStopwatch();
     }
 
-    completeReactionInstruction() {
-        this.instruct.innerText = (this.lang === "hi") ? "प्रतिक्रिया पूरी हुई" : "Reaction completed";
+  completeReactionInstruction() {
+    let completionText;
+    if (this.lang === "hi") {
+        completionText = "प्रतिक्रिया पूरी हुई";
+        this.instruct.innerText = completionText;
+    } else {
+        completionText = "Reaction completed";
+        this.instruct.innerText = completionText;
     }
 
-    Validate(step) {
-        Array.from(document.getElementsByClassName("step")).forEach((e, index) => {
-            e.classList.toggle("cursor", (index + 1) !== step);
+    // Add voiceover for the completion instruction
+    // Ensure voiceLang is set correctly, though it should already be from previous steps
+    voiceLang = this.lang === "hi" ? "hindi" : "eng";
+    speakStep(completionText);
+}
+
+    Validate(currentStep) {
+        // Iterate through all elements that are part of the steps.
+        // It's highly recommended to add a `data-step` attribute to your HTML elements
+        // (e.g., `<img id="DISTILLED_-WATER1" class="step" data-step="2">`)
+        // This makes validation robust and independent of their order in the HTML.
+        Array.from(document.querySelectorAll('.step, #DISTILLED_-WATER1, #stir')).forEach(e => {
+            let elementStep = parseInt(e.dataset.step); // Get step from data-step attribute
+            if (isNaN(elementStep)) { // Fallback if data-step is not set (e.g., for stir)
+                if (e.id === "DISTILLED_-WATER1") elementStep = 2;
+                else if (e.id === "Sulphuricacid1") elementStep = 3;
+                else if (e.id === "SodiumThiosulphate1") elementStep = 4;
+                else if (e.id === "starchsolution1") elementStep = 5;
+                else if (e.id === "Hydrogenperoxide1") elementStep = 6;
+                else if (e.id === "stir") elementStep = 7;
+            }
+
+            // Only the element matching the current step should have the cursor/be interactive
+            const isActiveStep = (elementStep === currentStep);
+            e.classList.toggle("cursor", isActiveStep);
+            e.style.pointerEvents = isActiveStep ? "auto" : "none"; // Control clickability
         });
     }
-    
 }
 
 var chemicals = new Chemical();
-chemicals.Validate(1);
+// Initial validation and instruction will happen in closePopup()
 
 document.querySelectorAll('.clk').forEach(e => {
     e.addEventListener("click", (event) => {
-        chemicals.movementOfSelectedBeaker(event.target.id);
+        // Check if the clicked element corresponds to the current allowed step
+        // It's crucial that your HTML elements for Sulphuricacid1, SodiumThiosulphate1, etc.
+        // also have the class `step` and a `data-step` attribute like `data-step="3"`.
+        const clickedElementStep = parseInt(event.target.dataset.step);
+        if (chemicals.step === clickedElementStep) {
+            chemicals.movementOfSelectedBeaker(event.target.id);
+        } else {
+            console.warn(`Invalid click for step ${chemicals.step}. Clicked: ${event.target.id} (expected step ${clickedElementStep || 'N/A'}).`);
+        }
     });
 });
 
 document.getElementById("DISTILLED_-WATER1").addEventListener('click', () => {
-    chemicals.DirectAnimationForDistillerWater();
+    console.log("DISTILLED_-WATER1 clicked. Current step:", chemicals.step);
+    // Only allow distilled water click at step 2
+    if (chemicals.step === 2) {
+        chemicals.DirectAnimationForDistillerWater();
+    } else {
+        console.warn("Invalid step for distilled water interaction. Current step:", chemicals.step);
+    }
 });
 
 document.getElementById("stir").addEventListener('click', () => {
-    chemicals.stirAnimation("stir");
+    console.log("Stir clicked. Current step:", chemicals.step);
+    // Only allow stir click at step 7
+    if (chemicals.step === 7) {
+        chemicals.stirAnimation("stir");
+    } else {
+        console.warn("Invalid step for stir interaction. Current step:", chemicals.step);
+    }
 });
 
 // POPUP
@@ -297,9 +351,19 @@ function closePopup() {
     localStorage.setItem("flask", document.getElementById('flask').value);
     localStorage.setItem("lang", document.getElementById('lang').value);
     document.getElementById("popup").style.display = "none";
+
+    // Reinitialize the chemicals object to apply selected language and flask
+    chemicals = new Chemical(); // Creates a new Chemical instance
+    chemicals.step = 2; // Manually set the step to 2 for the first interaction (distilled water)
+    chemicals.FlaskOfMl(); // Ensure FlaskMl is set before instructions are updated
+
+    // Update instruction and play voice for step 2
+    chemicals.UpdateInstruction(chemicals.step);
+    // Make only the distilled water clickable
+    chemicals.Validate(chemicals.step);
 }
 
-// STOPWATCH LOGIC
+// STOPWATCH LOGIC (No changes needed here based on the described issue)
 let timer;
 let elapsedMs = 0;
 let targetTimeMs = 0;
@@ -317,11 +381,19 @@ function startStopwatch() {
     const flask = localStorage.getItem("flask");
     targetTimeMs = getTargetTime(flask);
 
+    let instructionText; // Declare a variable to hold the instruction text
     if (chemicals.lang === "hi") {
-        chemicals.instruct.innerText = "कृपया प्रतिक्रिया पूरी होने तक प्रतीक्षा करें";
+        instructionText = "कृपया प्रतिक्रिया पूरी होने तक प्रतीक्षा करें";
+        chemicals.instruct.innerText = instructionText;
     } else {
-        chemicals.instruct.innerText = "Please wait for completion of reaction";
+        instructionText = "Please wait for completion of reaction";
+        chemicals.instruct.innerText = instructionText;
     }
+
+    // Add this line to play the voiceover for the instruction
+    // Ensure voiceLang is correctly set before calling speakStep
+    voiceLang = chemicals.lang === "hi" ? "hindi" : "eng"; // Just to be super safe, re-set voiceLang
+    speakStep(instructionText); // Play the voiceover for the current instruction text
 
     timer = setInterval(() => {
         elapsedMs += 10;
@@ -335,12 +407,12 @@ function startStopwatch() {
 
 function stopStopwatch() {
     clearInterval(timer);
-    elapsedMs = targetTimeMs;
+    elapsedMs = targetTimeMs; // Ensure display shows the exact target time
     updateDisplay(elapsedMs);
 
     let beaker = document.getElementById("flask20ml");
 
-    if (chemicals.FlaskMl == 5) beaker.setAttribute('src', "./90mlflask.png");
+    if (chemicals.FlaskMl == 5) beaker.setAttribute('src', "./90mlflaskafter.png");
     else if (chemicals.FlaskMl == 10) beaker.setAttribute('src', "./100mlflask.png");
     else if (chemicals.FlaskMl == 15) beaker.setAttribute('src', "./115mlflask.png");
     else if (chemicals.FlaskMl == 20) beaker.setAttribute('src', "./120mlflask.png");
@@ -352,6 +424,9 @@ function resetStopwatch() {
     clearInterval(timer);
     elapsedMs = 0;
     updateDisplay(0);
+    document.getElementsByClassName("finalFlask")[0].setAttribute("src", "./20mlflask .png");
+    chemicals = new Chemical();
+    openPopup();
 }
 
 function forwardTime() {
@@ -384,4 +459,5 @@ document.getElementById("flask20ml").addEventListener("mouseover", () => {
     document.getElementById("flask20ml").setAttribute("title", titles[flask]);
 });
 
-
+// Call openPopup immediately when the script loads to show the initial selection
+openPopup();
