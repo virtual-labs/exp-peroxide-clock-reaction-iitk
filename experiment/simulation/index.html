@@ -57,13 +57,15 @@
                   <button onclick="startStopwatch()" style="background-color: greenyellow; color: black;">Start</button>
                   <button onclick="stopStopwatch()" style="background-color: orangered; color: black;">Stop</button>
                   <button onclick="resetStopwatch()" style="background-color: yellow; color: black;">Reset</button>
+                  <button onclick="forwardTime()" style="background-color: skyblue; color: black;">Forward 10s</button>
+
                 </div>
               </div>
         
     </div>
     <!-- <img src="./20mlflask .png" alt=""> -->
     <br>
-    <img src="./stir.png" alt="" class="stir" id="stir">
+    <img src="./stir.png" alt="" class="stir" data-step="7" id="stir">
     <!-- stopwatch -->
 
     <div class="lab">
@@ -73,18 +75,22 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/archive/1/1d/20060427164747%21No_image.svg/120px-No_image.svg.png" class="flask img " id="flask15ml" alt="">
 <img src="20mlflask .png" class="flask img finalFlask" id="flask20ml" alt="flask20ml">
 <img src="emptybeaker.png" class="beaker img" id="emptybeaker">
-<img src="DISTILLED_-WATER1.png"  class="img water1 water step cursor" id="DISTILLED_-WATER1" title="distilled water"> 
-<img src="SulphuricAcid1.png" class="solution SulphuricAcid1 img clk step cursor" id="Sulphuricacid1" title="sulphuric acid"> 
-<img src="SODIUM THIOSULPHATE1.png" class="solution  img SodiumThiosulphate1 clk step cursor" id="SodiumThiosulphate1" alt="" title="sodium thiosulphate">
-<img src="STATCHSOLUTION1.png" class="solution img starch1 clk step cursor" id="starchsolution1" alt="starch1" title="STATCH SOLUTION">
-<img src="Hydrogen_peroxide_solution_3__1.png" class="img  hydrogen1 clk step cursor" id="Hydrogenperoxide1" title="Hydrogen peroxide">
-<!-- <img src="stir.png" class="img stiring" id="stirringrod" alt=""> -->
+<img src="DISTILLED_-WATER1.png"  class="img water1 water step cursor" id="DISTILLED_-WATER1" data-step="2" title="distilled water"> 
+<img src="SulphuricAcid1.png" class="solution SulphuricAcid1 img clk step cursor" id="Sulphuricacid1" data-step="3" title="sulphuric acid"> 
+<img src="SODIUM THIOSULPHATE1.png" class="solution  img SodiumThiosulphate1 clk step cursor" id="SodiumThiosulphate1" data-step="4" alt="" title="sodium thiosulphate">
+<img src="STATCHSOLUTION1.png" class="solution img starch1 clk step cursor" id="starchsolution1" alt="starch1" data-step="5" title="STATCH SOLUTION">
+<img src="Hydrogen_peroxide_solution_3__1.png" class="img  hydrogen1 clk step cursor" id="Hydrogenperoxide1" data-step="6" title="Hydrogen peroxide">
+
+
 </div>
 
     
     </div>
 
 
-    <script src="./script.js"></script>
+    <script src="./newScript.js"></script>
+        <!-- <script src="./Script.js"></script> -->
+   
+
 </body>
 </html>

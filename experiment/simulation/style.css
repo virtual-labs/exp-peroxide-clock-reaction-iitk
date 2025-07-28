@@ -33,19 +33,19 @@
 }
 @keyframes rotateAnimation {
     0% {
-      transform: translateY(-119px) translateX(150px) translateY(50px) rotate(-32deg);
+      transform: translateY(-119px) translateX(200px) translateY(50px) rotate(-32deg);
     }
     25% {
-      transform: translateY(-119px) translateX(150px) translateY(50px) rotate(-29deg);
+      transform: translateY(-119px) translateX(200px) translateY(50px) rotate(-29deg);
     }
     50% {
-      transform: translateY(-119px) translateX(150px) translateY(50px) rotate(-32deg);
+      transform: translateY(-119px) translateX(200px) translateY(50px) rotate(-32deg);
     }
     75% {
-      transform: translateY(-119px) translateX(150px) translateY(50px) rotate(-29deg);
+      transform: translateY(-119px) translateX(200px) translateY(50px) rotate(-29deg);
     }
     100% {
-      transform: translateY(-119px) translateX(150px) translateY(50px) rotate(-32deg);
+      transform: translateY(-119px) translateX(200px) translateY(50px) rotate(-32deg);
       
     }
   }
@@ -53,6 +53,7 @@
     position: relative;
     transition: transform 4s ease;
     animation: rotateAnimation 3s linear infinite;
+    z-index: 10000;
   }
 .lab img{
     position: relative;
@@ -178,7 +179,7 @@
 
   #flask20ml{
     top: 381px;
-    z-index: 99999999;
+    /* z-index: 99999999; */
   }
 
   .permission{
@@ -188,7 +189,8 @@
   }
 
   .cursor{
-    cursor: not-allowed;
+    /* cursor: not-allowed; */
+    cursor: pointer;
     pointer-events: none;
    
   }
