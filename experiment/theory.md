@@ -2,15 +2,15 @@
 
 When hydrogen peroxide is added to a solution of potassium iodide, the iodide ions are oxidized to form iodine.<br>
 
-2I– (aq) + 2H+ (aq) + H2O2 (aq) = I2 (s) + 2H2O (l) <br>
+2I<sup>-</sup> (aq) + 2H<sup>+</sup> (aq) + H<sub>2</sub>O<sub>2</sub> (aq) = I<sub>2</sub> (s) + 2H<sub>2</sub>O (l) <br>
 
 The rate of the reaction can be expressed as <br>
 
-Rate = k [I–]n [H2O2]m [H+]p (1) <br>
+Rate = k [I<sup>-</sup>]<sup>n</sup> [H<sub>2</sub>O<sub>2</sub>]<sup>m</sup> [H<sup>+</sup>]<sup>p</sup> (1) <br>
 
-where, k is the rate constant, n, m, and p are the order of the reaction with respect to iodide, hydrogen peroxide and acid, respectively. However, if the concentration of H+ is held constant throughout the experiment then its effect will not appear in the rate law, which simplifies to <br>
+where, k is the rate constant, n, m, and p are the order of the reaction with respect to iodide, hydrogen peroxide and acid, respectively. However, if the concentration of H<sup>+</sup> is held constant throughout the experiment then its effect will not appear in the rate law, which simplifies to <br>
 
-Rate = k' [I–]n [H2O2]m where k' = k[H+]p (2) <br>
+Rate = k<sup>'</sup> [I<sup>-</sup>]<sup>n</sup> [H<sub>2</sub>O<sub>2</sub>]<sup>m</sup> where k<sup>'</sup> = k[H<sup>+</sup>]<sup>p</sup> (2) <br>
 
 The rate law for the reaction between iodide and hydrogen peroxide can be determined by carrying out experiments in which the initial concentrations of iodide and peroxide are varied. In this way we can measure the value of m and n once the initial rate for each experiment is known. <br>
 
