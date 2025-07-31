@@ -1,29 +1,30 @@
-When hydrogen peroxide is added to a solution of potassium iodide, the iodide ions are oxidized to form iodine. <br>
+<b>Theory of experiment</b><br>
 
-2I– (aq) + 2H+ (aq) + H2O2 (aq)  I2 (s) + 2H2O (l) <br>
+When hydrogen peroxide is added to a solution of potassium iodide, the iodide ions are oxidized to form iodine.<br>
+
+2I<sup>-</sup> (aq) + 2H<sup>+</sup> (aq) + H<sub>2</sub>O<sub>2</sub> (aq) = I<sub>2</sub> (s) + 2H<sub>2</sub>O (l) <br>
 
 The rate of the reaction can be expressed as <br>
 
-Rate = k [I–]n [H2O2]m [H+]p					(1)<br>
+Rate = k [I<sup>-</sup>]<sup>n</sup> [H<sub>2</sub>O<sub>2</sub>]<sup>m</sup> [H<sup>+</sup>]<sup>p</sup> (1) <br>
 
-where, k is the rate constant, n, m and p are the order of the reaction with respect to iodide, hydrogen peroxide and acid, respectively. However, if the concentration of H+ is held constant throughout the experiment then its effect will not appear in the rate law, which simplifies to <br>
+where, k is the rate constant, n, m, and p are the order of the reaction with respect to iodide, hydrogen peroxide and acid, respectively. However, if the concentration of H<sup>+</sup> is held constant throughout the experiment then its effect will not appear in the rate law, which simplifies to <br>
 
-Rate = k' [I–]n [H2O2]m where k' = k[H+]p 			(2)<br>
+Rate = k<sup>'</sup> [I<sup>-</sup>]<sup>n</sup> [H<sub>2</sub>O<sub>2</sub>]<sup>m</sup> where k<sup>'</sup> = k[H<sup>+</sup>]<sup>p</sup> (2) <br>
 
-The rate law for the reaction between iodide and hydrogen peroxide can be determined by carrying out experiments in which the initial concentrations of iodide and peroxide are varied. In this way we can measure the value of m and n once the initial rate for each experiment is known.<br>
+The rate law for the reaction between iodide and hydrogen peroxide can be determined by carrying out experiments in which the initial concentrations of iodide and peroxide are varied. In this way we can measure the value of m and n once the initial rate for each experiment is known. <br>
 
+The addition of thiosulfate ions (S<sub>2</sub>O<sub>3</sub><sup>2–</sup>) allows an accurate measurement of the rate at which the peroxide-iodide reaction is taking place. Suppose that a small and known amount of thiosulfate ion is added to the original mixture of peroxide and iodide. Iodine is produced slowly by the reaction between peroxide and iodide ions and the thiosulfate ions immediately consumes iodine via the reaction <br>
 
-The addition of thiosulfate ions (S2O32–) allows an accurate measurement of the rate at which the peroxide-iodide reaction is taking place. Suppose that a small and known amount of thiosulfate ion is added to the original mixture of peroxide and iodide. Iodine is produced slowly by the reaction between peroxide and iodide ions and the thiosulfate ions immediately consumes iodine via the reaction <br>
-I2 + 2S<sub>2</sub>O<sub>3</sub>->2I<sup>-</sup>
+I<sub>2</sub> + 2S<sub>2</sub>O<sub>3</sub><sup>2–</sup> = 2I<sup>-</sup>+S₄O₆²⁻ <br>
 
+As long as excess thiosulfate ions are present in the solution, no free iodine can accumulate because it is immediately turned into iodide ions which are colourless. On the other hand, if thiosulfate is the limiting reagent, iodine starts to form in the solution once all the thiosulphate ions are consumed. Iodine is pale yellow. If starch is added to the solution, then a more dramatic blue solution is formed by the complex of starch–iodine. The color change is sharp, and the time elapsed to this point is determined simply by use of a stopwatch. The time from the addition of the peroxide solution to the appearance of the blue color is ∆t for the reaction. Since the stoichiometry of the thiosulfate–iodine and the peroxide–iodide reactions are known, it is possible to calculate how many moles of peroxide were reduced in the interval of time. Consequently, the average rate (moles of hydrogen peroxide consumed per liter per second) of the reaction during this period can be calculated as <br>
 
-As long as excess thiosulfate ions are present in the solution, no free iodine can accumulate because it is immediately turned into iodide ions which are colorless. On the other hand, if thiosulfate is the limiting reagent, iodine starts to form in the solution once all the thiosulphate ions are consumed. Iodine is  pale yellow. If starch is added to the solution then a more dramatic blue solution is formed by the complex of starch–iodine. The color change is sharp, and the time elapsed to this point is determined simply by use of a stopwatch. The time from the addition of the peroxide solution to the appearance of the blue color is ∆t for the reaction. Since the stoichiometry of the thiosulfate–iodine and the peroxide–iodide reactions is known, it is possible to calculate how many moles of peroxide were reduced in the interval of time. Consequently, the average rate (moles of hydrogen peroxide consumed per liter per second) of the reaction during this period can be calculated as<br>
+Rate=-∆[H<sub>2</sub>O<sub>2</sub>]/∆t (3) <br>
 
-Rate=-∆[H<sub>2</sub>O<sub>2</sub>]/∆t				(3)<br>
+Using equation (3), the initial rate for different experiments is determined and consequently the rate equation can be written in terms of orders n and determine the order of the reaction, we take “log” on both side of equation (2). <br>
 
-Using equation (3), the initial rate for different experiments is determined and consequently the rate equation can be written in terms of orders n and determine the order of the reaction, we take “log” on both side of equation (2).<br>
+log[rate] = logk + n log[I<sub>–]+ m log[H<sub>2</sub>O<sub>2</sub>] (4) <br>
 
-log[rate] = logk + n log[I– ]+ m log[H2O2 ]                                    (4)<br>
- 
-By separately ploting log[rate] vs log[I– ] & log[rate] vs log[H2O2 ] we get straight lines. From the slopes of these straight lines, we get n and m, the orders of the reaction with respect to KI and H2O2 respectively.<br>
+By separately plotting log[rate] vs log[I<sub>–] & log[rate] vs log[H<sub>2</sub>O<sub>2</sub>] we get straight lines. From the slopes of these straight lines, we get n and m, the orders of the reaction with respect to KI and H<sub>2</sub>O<sub>2</sub> respectively.
 
