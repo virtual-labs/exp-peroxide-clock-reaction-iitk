@@ -24,7 +24,7 @@ Rate=-∆[H<sub>2</sub>O<sub>2</sub>]/∆t (3) <br>
 
 Using equation (3), the initial rate for different experiments is determined and consequently the rate equation can be written in terms of orders n and determine the order of the reaction, we take “log” on both side of equation (2). <br>
 
-log[rate] = logk + n log[I<sub>–]+ m log[H<sub>2</sub>O<sub>2</sub>] (4) <br>
+log[rate] = logk + n log[I<sup>–</sup>]+ m log[H<sub>2</sub>O<sub>2</sub>] (4) <br>
 
-By separately plotting log[rate] vs log[I<sub>–] & log[rate] vs log[H<sub>2</sub>O<sub>2</sub>] we get straight lines. From the slopes of these straight lines, we get n and m, the orders of the reaction with respect to KI and H<sub>2</sub>O<sub>2</sub> respectively.
+By separately plotting log[rate] vs log[I<sup>–</sup>] & log[rate] vs log[H<sub>2</sub>O<sub>2</sub>] we get straight lines. From the slopes of these straight lines, we get n and m, the orders of the reaction with respect to KI and H<sub>2</sub>O<sub>2</sub> respectively.
 
