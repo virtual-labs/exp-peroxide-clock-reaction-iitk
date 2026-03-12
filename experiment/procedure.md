@@ -36,7 +36,7 @@
 <img src="images/fig89.jpg" width="600" height="300"><br>
 <!-- <b>See video!</b><br> -->
 <br>
-<b>Sample Data and Analysis</b><br>
+<!--<b>Sample Data and Analysis</b><br>
 <br>
 <b>Table – 1</b><br>
 <br>
@@ -63,7 +63,6 @@ Here, the order of the reaction with respect to H2O2 = 1 (nearest possible integ
 Here the order of the reaction with respect to KI = 1 (nearest possible integer of 1.02)<br>
 The rate law equation can be expressed as,<br>
 <br>
-
 Rate = k [I–] [H2O2]  , where ‘k’ is the rate constant.<br>
 <br>
 Now, Rate=-(∆[H_2 O_2])/∆t  ,        ∆[H_2 O_2]= 0.5× Moles of S2O32- consumed
