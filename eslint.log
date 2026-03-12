@@ -1,0 +1,20 @@
+
+/home/runner/work/exp-peroxide-clock-reaction-iitk/exp-peroxide-clock-reaction-iitk/experiment/simulation/newScript.js
+  142:82  warning  'finalElementId' is defined but never used              no-unused-vars
+  156:31  warning  'ML' is assigned a value but never used                 no-unused-vars
+  220:19  warning  'nextInstructionId' is assigned a value but never used  no-unused-vars
+  349:10  warning  'closePopup' is defined but never used                  no-unused-vars
+  423:10  warning  'resetStopwatch' is defined but never used              no-unused-vars
+  432:10  warning  'forwardTime' is defined but never used                 no-unused-vars
+
+/home/runner/work/exp-peroxide-clock-reaction-iitk/exp-peroxide-clock-reaction-iitk/experiment/simulation/script.js
+  129:82  warning  'finalElementId' is defined but never used  no-unused-vars
+  145:31  warning  'ML' is assigned a value but never used     no-unused-vars
+  186:5   warning  Duplicate name 'UpdateInstruction'          no-dupe-class-members
+  291:10  warning  'openPopup' is defined but never used       no-unused-vars
+  295:10  warning  'closePopup' is defined but never used      no-unused-vars
+  351:10  warning  'resetStopwatch' is defined but never used  no-unused-vars
+  357:10  warning  'forwardTime' is defined but never used     no-unused-vars
+
+✖ 13 problems (0 errors, 13 warnings)
+
